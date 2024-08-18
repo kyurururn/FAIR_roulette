@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(3,37,65);
+    background: linear-gradient(0deg, rgba(3,37,65,1) 0%, rgba(39,77,135,1) 50%, rgba(3,37,65,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgba(39,77,135,1);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 100%);
+    z-index:100;
+    pointer-events: none;
+}
+
+.roulette-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px; /* 追加: 円弧のような動きを強調するための遠近感 */
+}
+
+.roulette {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.item {
+    color: #5ec7ff;
+    width: 100vw;
+    font-size: 22.5vh;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transform-style: preserve-3d; /* 追加: 3D効果を適用 */
+}
+
+.color-blue {
+    color: #5ec7ff;
+}
+
+.color-white {
+    color: #ffffff;
+}
